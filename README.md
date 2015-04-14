@@ -1,4 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/83l5njueb4k0ns60?svg=true)](https://ci.appveyor.com/project/AxGord/pony)
 <h1>PonyNode</h1>
 Site engine
 
@@ -18,4 +17,4 @@ haxelib install Pony
 haxelib install continuation</pre>
 
 <h2>Video</h2>
-(http://www.youtube.com/watch?v=7b6GQZ6NoWc)
+http://www.youtube.com/watch?v=7b6GQZ6NoWc
