@@ -1,0 +1,3 @@
+Welcome to PonyNode Example Site!
+Guest Book
+New message

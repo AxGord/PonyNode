@@ -1,0 +1,1 @@
+haxe  -debug --each -lib continuation -cp src -lib pony -php E:\systems\WeSer\www -main Main
