@@ -36,14 +36,14 @@ class Main
 		db.log << Log.trace;
 		db.error << Log.trace;
 		
-		var httpServer = new HttpServer(8088,{});
+		var httpServer = new HttpServer(8088);
 		var webServer:WebServer = new WebServer(['Home', 'Defaults'], DefaultModulePack.create().concat([
 			cast new MModels(Classes.dir('', 'models'), DefaultActionsPack.list, db)
 		]));
 		httpServer.request = webServer.connect;
 		
 		#if php
-		httpServer.run();
+		httpServer.run(new pony.net.http.ServersideStorageDB(db.storage));
 		php.Lib.print('<hr><pre>');
 		for (p in trc) php.Lib.println(p.b.fileName+':' + p.b.lineNumber + ': ' + p.a);
 		#end
