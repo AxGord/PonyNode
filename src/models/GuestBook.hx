@@ -1,6 +1,6 @@
 package models;
 import pony.db.DBV;
-import pony.Errors;
+import pony.tests.Errors;
 import pony.net.http.modules.mmodels.fields.FDate;
 import pony.net.http.modules.mmodels.fields.FString;
 import pony.net.http.modules.mmodels.fields.FText;
@@ -33,8 +33,8 @@ class GuestBookConnect extends ModelConnect {
 		]);
 	}
 	
-	function insertValidate(author:String, text:String):pony.Errors {
-		var e = new pony.Errors();
+	function insertValidate(author:String, text:String):Errors {
+		var e = new Errors();
 		
 		e.arg = 'text';
 		e.test(text == '', 'Empty');

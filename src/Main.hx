@@ -15,7 +15,6 @@ import pony.Pair;
  * Main
  * @author AxGord
  */
-
 class Main 
 {
 	
@@ -25,6 +24,7 @@ class Main
 	
 	static function main() 
 	{
+		
 		#if (nodejs && debug)
 		js.Node.require('source-map-support').install();
 		#end
@@ -33,8 +33,8 @@ class Main
 		#end
 		
 		var db = new MySQL( { user: 'root', database: 'haxetestdb' } );
-		db.log << Log.trace;
-		db.error << Log.trace;
+		db.onLog << Log.trace;
+		db.onError << Log.trace;
 		
 		var httpServer = new HttpServer(8088);
 		var webServer:WebServer = new WebServer(['Home', 'Defaults'], DefaultModulePack.create().concat([

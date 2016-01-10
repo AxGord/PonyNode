@@ -1,2 +1,2 @@
-<link rel="stylesheet" href="tpl/Default/reset.css"/>
-<link rel="stylesheet" href="tpl/Default/style.css"/>
+<link rel="stylesheet" href="%static=reset.css%"/>
+<link rel="stylesheet" href="%static=style.css%"/>
