@@ -5,7 +5,7 @@ Site engine
 <p>Nodejs version</p>
 Install https://nodejs.org/
 <pre>npm install source-map-support
-npm install mime
+npm install send
 npm install mysql
 npm install spdy
 haxelib install Pony
