@@ -24,7 +24,6 @@ class Main
 	
 	static function main() 
 	{
-		
 		#if (nodejs && debug)
 		js.Node.require('source-map-support').install();
 		#end
