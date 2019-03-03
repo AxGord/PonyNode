@@ -1,4 +1,5 @@
 package models;
+
 import pony.db.DBV;
 import pony.tests.Errors;
 import pony.net.http.modules.mmodels.fields.FDate;
@@ -11,16 +12,15 @@ import pony.net.http.modules.mmodels.ModelConnect;
  * GuestBook
  * @author AxGord
  */
-class GuestBook extends Model
-{
+@:keep class GuestBook extends Model {
 	static var fields = {
 		author: new FString(),
 		text: new FText(),
 		date: new FDate()
-	};	
+	};
 }
 
-@:build(com.dongxiguo.continuation.Continuation.cpsByMeta(":async"))
+@:keep @:build(com.dongxiguo.continuation.Continuation.cpsByMeta(':async'))
 class GuestBookConnect extends ModelConnect {
 	
 	@:async function many() return @await db.get();
@@ -46,4 +46,5 @@ class GuestBookConnect extends ModelConnect {
 		
 		return e;
 	}
+	
 }

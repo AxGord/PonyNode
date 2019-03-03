@@ -1,1 +1,0 @@
-<div class="empty">--- <_l>Empty</_l> ---</div>

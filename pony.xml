@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<config>
+		<port>8088</port>
+		<mysql type="stringmap">
+			<user>admin</user>
+			<password type="string">123456</password>
+			<database>haxetestdb</database>
+		</mysql>
+	</config>
+	<server>
+		<haxe>6010</haxe>
+	</server>
+	<haxelib>
+		<lib>pony dev</lib>
+		<lib>hxnodejs 4.0.9</lib>
+		<lib>continuation</lib>
+	</haxelib>
+	<build>
+		<prepare hxml="app">
+			<main>Main</main>
+			<js>bin/app.js</js>
+			<cp>src</cp>
+			<dce>full</dce>
+			<d>analyzer-optimize</d>
+			<d>js-es6</d>
+		</prepare>
+		<build>
+			<hxml>app</hxml>
+		</build>
+	</build>
+	<uglify libcache="true">
+		<release>
+			<c/>
+			<m/>
+		</release>
+		<debug>
+			<sourcemap>
+				<input>bin/app.js.map</input>
+				<output>bin/app.js.map</output>
+				<url>app.js.map</url>
+				<source>app.js</source>
+				<offset>0</offset>
+			</sourcemap>
+		</debug>
+		<input>bin/app.js</input>
+		<output>bin/app.js</output>
+	</uglify>
+</project>

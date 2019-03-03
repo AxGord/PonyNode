@@ -1,0 +1,9 @@
+-main Main
+-js bin/app.js
+-cp src
+-dce full
+-D analyzer-optimize
+-D js-es6
+-lib pony:dev
+-lib hxnodejs:4.0.9
+-lib continuation
